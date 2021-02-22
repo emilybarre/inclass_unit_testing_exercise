@@ -1,12 +1,10 @@
 def test_calc_y():
     from find_y import calc_y
-    x1 = 1
-    y1 = 1
-    x2 = 2
-    y2 = 2
-    x = 0
+    point_1 = (1,1)
+    point_2 = (2,2)
+    x_of_point_3 = 0
     expected_result = 0
-    result = calc_y(x1, y1, x2, y2, x)
+    result = calc_y(point_1, point_2, x_of_point_3)
     assert result == expected_result
 
 def test_calc_m():
