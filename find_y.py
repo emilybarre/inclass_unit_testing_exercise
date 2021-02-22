@@ -11,14 +11,15 @@ def get_input():
     return x1, y1, x2, y2, x
 
 
-def convert_input(x1, y1, x2, y2):
+def convert_input(x1, y1, x2, y2, x):
     x1 = float(x1)
     y1 = float(y1)
     x2 = float(x2)
     y2 = float(y2)
+    x = float(x)
     point_1 = (x1, y1)
     point_2 = (x2, y2)
-    return point_1, point_2
+    return point_1, point_2, x
 
 def calc_m(x1, y1, x2, y2):
     m = (y2 - y1)/(x2 - x1)
@@ -40,7 +41,7 @@ def calc_y(point_1, point_2, x):
 def driver():
     interface()
     (x1, y1, x2, y2, x) = get_input()
-    (point1, point2) = convert_input(x1, y1, x2, y2)
+    (point1, point2, x) = convert_input(x1, y1, x2, y2, x)
     y = calc_y(point_1, point_2, x)
 
 if __name__ == "__main__":
