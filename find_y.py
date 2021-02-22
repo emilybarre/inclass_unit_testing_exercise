@@ -17,7 +17,7 @@ def convert_input(x1, y1, x2, y2):
     y2 = float(y2)
     point_1 = (x1, y1)
     point_2 = (x2, y2)
-
+    return point_1, point_2
 
 def calc_m(x1, y1, x2, y2):
     m = (y2 - y1)/(x2 - x1)
