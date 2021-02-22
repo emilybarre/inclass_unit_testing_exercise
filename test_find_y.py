@@ -27,7 +27,7 @@ def test_calc_y_int():
     result = calc_y_int(x1,y1,m)
     assert result == expected_result
 
-def test_convert_input(x1, y1, x2, y2):
+def test_convert_input():
     from find_y import convert_input
     x1 = "1"
     y1 = "1"
