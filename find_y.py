@@ -38,6 +38,11 @@ def calc_y(point_1, point_2, x):
     return y
 
 
+def print_output(x, point_1, point_2, y):
+    print("The y value for x = {} on the line that includes ({}, {}) and ({},{}) is y = {}".format(
+        x, point_1[0], point_2[0], point_1[1], point_2[1], y
+    ))
+    
 def driver():
     interface()
     (x1, y1, x2, y2, x) = get_input()
