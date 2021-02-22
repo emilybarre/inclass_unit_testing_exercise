@@ -33,9 +33,12 @@ def test_convert_input():
     y1 = "1"
     x2 = "2"
     y2 = "2"
+    x = "1"
     expected_result1 = (1, 1)
     expected_result2 = (2, 2)
-    (result1, result2) = convert_input(x1, y1, x2, y2)
+    expected_result3 = 1
+    (result1, result2, result3) = convert_input(x1, y1, x2, y2, x)
     assert result1 == expected_result1
     assert result2 == expected_result2
+    assert result3 == expected_result3
     
