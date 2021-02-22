@@ -1,44 +1,42 @@
-def test_calc_y():
+import pytest
+
+@pytest.mark.parametrize("input1, input2, input3, expected", [
+    ((1, 1), (2, 2), 0, 0),
+    ((2, 5), (4, 1), 1, 7)
+])
+def test_calc_y(input1, input2, input3, expected):
     from find_y import calc_y
-    point_1 = (1,1)
-    point_2 = (2,2)
-    x_of_point_3 = 0
-    expected_result = 0
-    result = calc_y(point_1, point_2, x_of_point_3)
-    assert result == expected_result
+    result = calc_y(input1, input2, input3)
+    assert result == expected
 
-def test_calc_m():
+@pytest.mark.parametrize("input1, input2, input3, input4, expected", [
+    (1, 1, 2, 2, 1),
+    (2, 5, 4, 1, -2)
+])
+def test_calc_m(input1, input2, input3, input4, expected):
     from find_y import calc_m
-    x1 = 1
-    y1 = 1
-    x2 = 2
-    y2 = 2 
-    expected_result = 1
-    result = calc_m(x1, y1, x2, y2)
-    assert result == expected_result
+    result = calc_m(input1, input2, input3, input4)
+    assert result == expected
 
-
-def test_calc_y_int():
+@pytest.mark.parametrize("input1, input2, input3, expected", [
+    (1, 1, 1, 0),
+    (2, 5, -2, 9)
+])
+def test_calc_y_int(input1, input2, input3, expected):
     from find_y import calc_y_int
-    x1 = 1
-    y1 = 1
-    m = 1
-    expected_result = 0
-    result = calc_y_int(x1,y1,m)
-    assert result == expected_result
+    result = calc_y_int(input1, input2, input3)
+    assert result == expected
 
-def test_convert_input():
+
+@pytest.mark.parametrize("input1, input2, input3, input4, input5, expected1, expected2, expected3", [
+    ("1","1","2","2","1",(1,1),(2,2),1),
+    ("2","5","4","1","1",(2,5),(4,1),1)
+])
+def test_convert_input(input1, input2, input3, input4, input5, expected1, expected2, expected3):
     from find_y import convert_input
-    x1 = "1"
-    y1 = "1"
-    x2 = "2"
-    y2 = "2"
-    x = "1"
-    expected_result1 = (1, 1)
-    expected_result2 = (2, 2)
-    expected_result3 = 1
-    (result1, result2, result3) = convert_input(x1, y1, x2, y2, x)
-    assert result1 == expected_result1
-    assert result2 == expected_result2
-    assert result3 == expected_result3
+    (result1, result2, result3) = convert_input(input1, input2, input3, input4, input5)
+    assert result1 == expected1
+    assert result2 == expected2
+    assert result3 == expected3
+
     
