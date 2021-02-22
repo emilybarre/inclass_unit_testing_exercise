@@ -8,7 +8,7 @@ def get_input():
     x2 = input("Please enter the x value of the second point on the line: ")
     y2 = input("Please enter the y value of the second point on the line: ")
     x = input("Please enter the x value of the third point on the line for which you would like to know the y value:")
-    return x1, y1, x2, y2
+    return x1, y1, x2, y2, x
 
 
 def convert_input(x1, y1, x2, y2):
@@ -39,7 +39,7 @@ def calc_y(point_1, point_2, x):
 
 def driver():
     interface()
-    (x1, y1, x2, y2) = get_input()
+    (x1, y1, x2, y2, x) = get_input()
     (point1, point2) = convert_input(x1, y1, x2, y2)
     y = calc_y(point_1, point_2, x)
 
