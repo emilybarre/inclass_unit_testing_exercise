@@ -12,3 +12,6 @@ def get_input():
 def driver():
     interface()
     (x1, y1, x2, y2) = get_input()
+
+if __name__ == "__main__":
+    driver()
