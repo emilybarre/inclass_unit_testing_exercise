@@ -20,3 +20,11 @@ def test_calc_m():
     assert result == expected_result
 
 
+def test_calc_y_int():
+    from find_y import calc_y_int
+    x1 = 1
+    y1 = 1
+    m = 1
+    expected_result = 0
+    result = calc_y_int(x1,y1,m)
+    assert result == expected_result
