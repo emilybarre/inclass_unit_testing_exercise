@@ -48,6 +48,8 @@ def driver():
     (x1, y1, x2, y2, x) = get_input()
     (point1, point2, x) = convert_input(x1, y1, x2, y2, x)
     y = calc_y(point_1, point_2, x)
+    print_output(x, point_1, point_2, y)
 
+    
 if __name__ == "__main__":
     driver()
