@@ -10,6 +10,11 @@ def get_input():
     return x1, y1, x2, y2
 
 
+def convert_input(x1, y1, x2, y2):
+    point_1 = (x1, y1)
+    point_2 = (x2, y2)
+
+
 def calc_m(x1, y1, x2, y2):
     m = (y2 - y1)/(x2 - x1)
     return m
@@ -20,7 +25,7 @@ def calc_y_int(x1,y1,m):
     return b
 
 
-def calc_y(point_1,point_2,x_of_point_3):
+def calc_y(point_1,point_2,x):
     m = calc_m(point_1[0], point_1[1], point_2[0], point_2[1])
     b = calc_y_int(point_1[0], point_1[1],m)
     y = (m*x_of_point_3) + b
