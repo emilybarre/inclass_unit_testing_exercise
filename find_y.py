@@ -29,7 +29,7 @@ def calc_y_int(x1,y1,m):
     return b
 
 
-def calc_y(point_1,point_2,x):
+def calc_y(point_1, point_2, x):
     m = calc_m(point_1[0], point_1[1], point_2[0], point_2[1])
     b = calc_y_int(point_1[0], point_1[1],m)
     y = (m*x) + b
@@ -39,6 +39,8 @@ def calc_y(point_1,point_2,x):
 def driver():
     interface()
     (x1, y1, x2, y2) = get_input()
+    (point1, point2) = convert_input(x1, y1, x2, y2)
+    y = calc_y(point_1, point_2, x)
 
 if __name__ == "__main__":
     driver()
