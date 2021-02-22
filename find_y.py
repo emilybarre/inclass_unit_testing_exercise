@@ -7,6 +7,7 @@ def get_input():
     y1 = input("Please enter the y value of the first point on the line: ")
     x2 = input("Please enter the x value of the second point on the line: ")
     y2 = input("Please enter the y value of the second point on the line: ")
+    x = input("Please enter the x value of the third point on the line for which you would like to know the y value:")
     return x1, y1, x2, y2
 
 
