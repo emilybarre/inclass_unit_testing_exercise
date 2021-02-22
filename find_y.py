@@ -11,6 +11,10 @@ def get_input():
 
 
 def convert_input(x1, y1, x2, y2):
+    x1 = float(x1)
+    y1 = float(y1)
+    x2 = float(x2)
+    y2 = float(y2)
     point_1 = (x1, y1)
     point_2 = (x2, y2)
 
