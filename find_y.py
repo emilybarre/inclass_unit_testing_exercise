@@ -9,6 +9,12 @@ def get_input():
     y2 = input("Please enter the y value of the second point on the line: ")
     return x1, y1, x2, y2
 
+
+def calc_m(x1, y1, x2, y2):
+    m = (y2 - y1)/(x2 - x1)
+    return m
+
+
 def driver():
     interface()
     (x1, y1, x2, y2) = get_input()
