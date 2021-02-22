@@ -15,6 +15,11 @@ def calc_m(x1, y1, x2, y2):
     return m
 
 
+def calc_y_int(x1,y1,m):
+    b = y1 - (m*x1)
+    return b
+
+
 def driver():
     interface()
     (x1, y1, x2, y2) = get_input()
